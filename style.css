@@ -1,0 +1,59 @@
+.flex {
+  display: flex;
+  justify-content: space-around;
+}
+
+.flex-item {
+  width: 20%;
+}
+
+.nav-button {
+  background-color: aquamarine;
+  border: none;
+  font-size: 2rem;
+}
+
+.nav-button:hover {
+  animation: hop;
+  animation-duration: 0.5s;
+}
+
+.scooter {
+  width: auto;
+  background-color: black;
+  color: white;
+  animation: scoot;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+
+.paused {
+  animation-play-state: paused;
+}
+
+@keyframes hop {
+  0% {
+    margin-top: 0;
+    opacity: 1;
+  }
+  25% {
+    margin-top: -1rem;
+    opacity: 0.6;
+  }
+  100% {
+    margin-bottom: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes scoot {
+  0% {
+    transform: translateX(0%);
+  }
+  50% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
